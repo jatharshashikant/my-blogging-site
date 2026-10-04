@@ -1,0 +1,66 @@
+# Reference projects (read-only, never track)
+../Homework-Hub-Full-Stack-App/
+Homework-Hub-Full-Stack-App/
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Node
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Java/Maven/Gradle
+target/
+*.class
+*.jar
+*.war
+*.ear
+.mvn/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Database
+*.db
+*.sqlite
+
+# Uploads (except tracked patterns if needed)
+uploads/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Testing
+coverage/
+.nyc_output/
+
+# Build artifacts
+build/
+dist/
+
+# IDE project files
+*.iml
+*.iws
+*.ipr
+
+# Package manager locks (optional, often tracked)
+# package-lock.json
+# yarn.lock

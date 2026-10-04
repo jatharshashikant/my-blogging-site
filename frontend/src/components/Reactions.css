@@ -1,0 +1,43 @@
+.reactions {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+  padding: 12px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.reaction-btn {
+  padding: 8px 12px;
+  border: 2px solid #ddd;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.reaction-btn:hover {
+  border-color: #007bff;
+  background: #f0f8ff;
+}
+
+.reaction-btn.active {
+  border-color: #007bff;
+  background: #007bff;
+  color: white;
+}
+
+.reaction-btn.love.active {
+  border-color: #e74c3c;
+  background: #e74c3c;
+}
+
+.reaction-btn.dislike.active {
+  border-color: #95a5a6;
+  background: #95a5a6;
+}
