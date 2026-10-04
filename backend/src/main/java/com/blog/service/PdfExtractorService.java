@@ -17,10 +17,9 @@ public class PdfExtractorService {
      *
      * @param file the uploaded PDF file
      * @return the stripped text, or {@code ""} if the document is blank
-     * @throws ValidationException if the file's content type is not {@code application/pdf}
-     * @throws IOException         if PDFBox cannot read the document
+     * @throws ValidationException if the file's content type is not {@code application/pdf} or if PDF parsing fails
      */
-    public String extract(MultipartFile file) throws IOException {
+    public String extract(MultipartFile file) {
         if (!"application/pdf".equals(file.getContentType())) {
             throw new ValidationException("Only PDF files are accepted. Received: " + file.getContentType());
         }
@@ -34,6 +33,8 @@ public class PdfExtractorService {
             String text = stripper.getText(document);
             String stripped = text.strip();
             return stripped.isBlank() ? "" : stripped;
+        } catch (IOException ex) {
+            throw new ValidationException("Failed to extract text from PDF: " + ex.getMessage());
         }
     }
 }

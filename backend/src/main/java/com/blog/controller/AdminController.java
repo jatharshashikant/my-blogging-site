@@ -60,7 +60,7 @@ public class AdminController {
     public ResponseEntity<ArticleResponse> createArticleFromPdf(
             @RequestPart MultipartFile file,
             @RequestParam(required = false) String title,
-            @RequestParam(required = false) String category) throws IOException {
+            @RequestParam(required = false) String category) {
 
         // Extract text from PDF
         String body = pdfExtractorService.extract(file);
