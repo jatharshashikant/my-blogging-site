@@ -64,3 +64,6 @@ dist/
 # Package manager locks (optional, often tracked)
 # package-lock.json
 # yarn.lock
+
+# Local Netlify folder
+.netlify
