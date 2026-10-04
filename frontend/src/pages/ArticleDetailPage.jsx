@@ -66,7 +66,7 @@ export default function ArticleDetailPage() {
         {article.documentUrl && (
           <p className="document-link">
             <a
-              href={`${process.env.REACT_APP_API_URL || 'http://localhost:8080'}/uploads/${article.documentUrl}`}
+              href={`${process.env.REACT_APP_API_URL || ''}/uploads/${article.documentUrl}`}
               target="_blank"
               rel="noreferrer"
             >
